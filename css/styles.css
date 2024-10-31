@@ -41,3 +41,14 @@ button {
     border-radius: 8px;
     object-fit: contain;
 }
+
+/* Example: Resize specific floor images if needed */
+#floor2 img {
+    width: 80%; /* Adjust width for Floor 2 */
+    height: auto;
+}
+
+#floor3 img {
+    width: 90%; /* Adjust width for Floor 3 */
+    height: auto;
+}

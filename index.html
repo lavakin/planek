@@ -8,62 +8,79 @@
 </head>
 <body>
 
-<!-- Dropdown for floor selection -->
+
 <div class="dropdown-container">
-    <label for="floorSelect">Select Floor:</label>
+    <label for="floorSelect">Patro:</label>
     <select id="floorSelect" onchange="showFloor(this.value)">
-        <option value="1">Floor 1</option>
-        <option value="2">Floor 2</option>
+        <option value="ground">Suterén</option>
+        <option value="floor1">První patro</option>
+        <option value="floor2">Druhý patro</option>
+        <option value="floor3">Půda</option>
     </select>
 </div>
 
+<!-- Ground Floor plan -->
+<div id="ground" class="floor-plan" style="display: none;">
+    <img src="images/kuchyn_dole.jpg" usemap="#groundMap" alt="Ground Floor Plan">
+    <img src="images/spol_dole.jpg" usemap="#groundMap" alt="Ground Floor Plan">
+    <img src="images/pokoj6.jpg" usemap="#groundMap" alt="Ground Floor Plan">
+</div>
+
 <!-- Floor 1 plan with clickable areas -->
-<div id="floor1" class="floor-plan">
+<div id="floor1" class="floor-plan" style="display: none;">
     <img src="images/planek.png" usemap="#floor1Map" alt="Floor 1 Plan">
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 80%; left: 40%; padding: 5px;">
+    <button onclick="showImage('images/jidelna.jpg')" style="position: absolute; top: 80%; left: 40%; padding: 5px;">
         Jídelna
     </button>
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 80%; left: 15%; padding: 5px;">
+    <button onclick="showImage('images/kuchyn.jpg')" style="position: absolute; top: 80%; left: 15%; padding: 5px;">
         Kuchyň
     </button>
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 66%; left: 77%; padding: 5px;">
+    <button onclick="showImage('images/obyvak.jpg')" style="position: absolute; top: 66%; left: 77%; padding: 5px;">
         Obývák
     </button>
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 40%; left: 80%; padding: 5px;">
-        Pracovna
+    <button onclick="showImage('images/pokoj1.jpg')" style="position: absolute; top: 40%; left: 80%; padding: 5px;">
+        Pokoj 1
     </button>
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 40%; left: 40%; padding: 5px;">
-        Chodba
+    <button onclick="showImage('images/hala1.jpg')" style="position: absolute; top: 40%; left: 40%; padding: 5px;">
+        Hala
     </button>
-
+    <map name="floor1Map">
+        <area shape="rect" coords="34,44,270,350" alt="Room 1" href="#" onclick="showImage('images/room1.jpg')">
+    </map>
 </div>
 
 <!-- Floor 2 plan with clickable areas -->
 <div id="floor2" class="floor-plan" style="display: none;">
     <img src="images/planek21.png" usemap="#floor2Map" alt="Floor 2 Plan">
     
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 80%; left: 40%; padding: 5px;">
-        Jídelna
+    <button onclick="showImage('images/hala2.jpg')" style="position: absolute; top: 60%; left: 40%; padding: 5px;">
+        Hala
     </button>
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 80%; left: 15%; padding: 5px;">
-        Kuchyň
+    <button onclick="showImage('images/pokoj2.jpg')" style="position: absolute; top: 30%; left: 25%; padding: 5px;">
+        Pokoj 2
     </button>
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 66%; left: 77%; padding: 5px;">
-        Obývák
+    <button onclick="showImage('images/pokoj5.jpg')" style="position: absolute; top: 55%; left: 65%; padding: 5px;">
+        Pokoj 5
     </button>
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 40%; left: 80%; padding: 5px;">
-        Pracovna
+    <button onclick="showImage('images/pokoj4.jpg')" style="position: absolute; top: 30%; left: 65%; padding: 5px;">
+        Pokoj 4
     </button>
-    <button onclick="showImage('images/satna.jpg')" style="position: absolute; top: 40%; left: 40%; padding: 5px;">
-        Chodba
+    <button onclick="showImage('images/pokoj3.jpg')" style="position: absolute; top: 30%; left: 40%; padding: 5px;">
+        Pokoj 3
     </button>
-
+    <map name="floor2Map">
+        <area shape="rect" coords="290,172,333,250" alt="Room 2" href="#" onclick="showImage('images/room2.jpg')">
+    </map>
 </div>
 
+<div id="floor3" class="floor-plan" style="display: none;">
+    <img src="images/puda.jpg" usemap="#floor3Map" alt="Floor 3 Plan">
+</div>
 <!-- Popup for displaying room images -->
 <div id="imagePopup" onclick="closePopup()">
     <img id="popupImage" src="" alt="Room" onclick="event.stopPropagation();">
 </div>
+
 
 <script src="js/scripts.js"></script>
 </body>
