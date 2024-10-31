@@ -77,8 +77,8 @@
     <img src="images/puda.jpg" usemap="#floor3Map" alt="Floor 3 Plan">
 </div>
 <!-- Popup for displaying room images -->
-<div id="imagePopup" onclick="closePopup()">
-    <img id="popupImage" src="" alt="Room" onclick="event.stopPropagation();">
+<div id="imagePopup" onclick="closePopup()" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center;">
+    <img id="popupImage" src="" alt="" style="max-width: 90%; max-height: 90vh;" onclick="event.stopPropagation();">
 </div>
 
 
